@@ -33,11 +33,11 @@ img {
 }
 
 /* Импорт стилей шапки */
-.navbar {
+.header {
   padding: 8px 0;
 }
 
-.navbar-block {
+.header-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +49,7 @@ img {
           align-items: center;
 }
 
-.navbar__info {
+.header__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +59,7 @@ img {
   text-align: right;
 }
 
-.navbar__contacts {
+.header__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,28 +69,29 @@ img {
           flex-direction: column;
 }
 
-.navbar__button {
+.header__button {
   margin-left: 30px;
+  font-weight: bold;
 }
 
-.navbar__phone {
+.header__phone {
   display: inline-block;
   color: #333333;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 750;
   text-decoration: none;
   margin-top: 10px;
 }
 
 @media (max-width: 768px) {
-  .navbar__contacts {
+  .header__contacts {
     display: none;
   }
-  .navbar__button {
+  .header__button {
     font-size: 12px;
     padding: 15px 26px;
   }
-  .navbar__logo {
+  .header__logo {
     width: 90px;
   }
 }
@@ -98,6 +99,7 @@ img {
 /* Стили для главного экрана */
 .hero {
   padding: 50px 0;
+  background-color: #f5f5f5;
 }
 
 .hero-block {
@@ -123,7 +125,7 @@ img {
   display: inline-block;
   margin-bottom: 70px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero-list {
