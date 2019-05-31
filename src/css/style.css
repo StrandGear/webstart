@@ -92,12 +92,16 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: 'Museo Sans Bold' , sans-serif;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .header__button {
   margin-left: 30px;
-  font-family: 'Museo Sans Bold' , sans-serif;
-  font-weight: 700;
+  font-family: 'Museo Sans Black' , sans-serif;
+  font-weight: 900;
+  font-size: 12px;
 }
 
 .header__phone {
@@ -105,7 +109,7 @@ img {
   color: #333333;
   font-size: 20px;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 9px;
   font-family: 'Museo Sans Black' , sans-serif;
   font-weight: 900;
 }
@@ -136,22 +140,23 @@ img {
 }
 
 .hero-text {
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  padding-right: 120px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-right: 30px;
 }
 
 .hero-text__title {
   font-size: 41px;
   line-height: 55px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   font-family: 'Museo Sans Bold' , sans-serif;
   font-weight: 700;
+  color: #333333;
 }
 
 .hero-text__subtitle {
   display: inline-block;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
   font-size: 20px;
   font-family: 'Museo Sans Bold' , sans-serif;
   font-weight: 700;
@@ -169,12 +174,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .hero-list__image {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border: 2px solid #ffd200;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,6 +198,10 @@ img {
 
 .hero-list__text {
   max-width: 300px;
+}
+
+.hero-image {
+  margin-right: -50px;
 }
 
 @media (max-width: 1200px) {

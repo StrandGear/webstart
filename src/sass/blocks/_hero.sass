@@ -4,16 +4,17 @@
    &-block
       display: flex
    &-text
-      flex-basis: 45%  /*чтобы блок занимал половину экрана*/
-      padding-right: 120px
+      flex-basis: 50%  /*чтобы блок занимал половину экрана*/
+      padding-right: 30px
       &__title
          font-size:  41px
          line-height: 55px
-         margin-bottom: 40px
+         margin-bottom: 38px
          +bold
+         color: $text-color
       &__subtitle
          display: inline-block /* без этого не работают отступы */
-         margin-bottom: 70px
+         margin-bottom: 65px
          font-size: 20px
          +bold
          
@@ -23,10 +24,12 @@
       &__item
          display: flex
          align-items: center
-         margin-bottom: 25px
+         margin-bottom: 24px
+         font-size: 14px
+         line-height: 1.8
       &__image
-         width: 40px
-         height: 40px
+         width: 36px
+         height: 36px
          border: 2px solid $main-color
          display: flex
          align-items: center
@@ -35,6 +38,8 @@
          margin-right: 30px
       &__text
          max-width: 300px
+   &-image
+      margin-right: -50px
 @media (max-width: 1200px)
    .hero
       &-block
