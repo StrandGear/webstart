@@ -1,11 +1,11 @@
 .hero
-   padding: 50px 0
+   padding: 50px 0 0
    background-color: $bg-color
    &-block
       display: flex
    &-text
       flex-basis: 50%  /*чтобы блок занимал половину экрана*/
-      padding-right: 30px
+      padding-right: 100px
       &__title
          font-size:  41px
          line-height: 55px
@@ -27,6 +27,8 @@
          margin-bottom: 24px
          font-size: 14px
          line-height: 1.8
+         &:last-child
+            margin-bottom: 0
       &__image
          width: 36px
          height: 36px
