@@ -6,11 +6,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url(c:\Users\Bella Karo\Desktop\DevelopingSites_3_0\HW24_Optimization\hw_24-speed\src\sass\animate\_base.css);
-@import url(c:\Users\Bella Karo\Desktop\DevelopingSites_3_0\HW24_Optimization\hw_24-speed\src\sass\animate\fading_entrances\fadeIn.css);
-@import url(c:\Users\Bella Karo\Desktop\DevelopingSites_3_0\HW24_Optimization\hw_24-speed\src\sass\animate\fading_entrances\fadeInDown.css);
-@import url(c:\Users\Bella Karo\Desktop\DevelopingSites_3_0\HW24_Optimization\hw_24-speed\src\sass\animate\fading_entrances\fadeInLeft.css);
-@import url(c:\Users\Bella Karo\Desktop\DevelopingSites_3_0\HW24_Optimization\hw_24-speed\src\sass\animate\fading_entrances\fadeInUp.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -463,7 +458,6 @@ img {
   margin-left: -180px;
 }
 
-/* Импорт анимации */
 /* Slider */
 .slick-slider {
   position: relative;
