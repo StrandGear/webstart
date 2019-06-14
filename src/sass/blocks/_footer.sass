@@ -1,8 +1,11 @@
 .footer
    position: relative
+   display: flex
+   flex-direction: column
 .map
    position: absolute
    width: 50%
+   height: 640px
    left: 0
    top: 0
 .contacts
@@ -39,3 +42,24 @@ a
    text-decoration: none
    color: $text-color
    +bold
+@media (max-width: 768px)
+   .footer
+      max-width: 768px
+   .map
+      position: static
+      max-width: 768px
+      width: 90%
+      height: 400px
+      top: 0
+      margin-left: auto
+      margin-right: auto
+   .contacts
+      flex-basis: auto
+      padding-top: 0
+      padding-left: 0
+      &-block
+         justify-content: center
+      &__title
+         margin-bottom: 50px
+         
+      

@@ -7,14 +7,16 @@ function defaultTask(cb) {
 
 exports.default = defaultTask
 
-let gulp = require('gulp');
-let cleanCSS = require('gulp-clean-css');
-const htmlmin = require('gulp-htmlmin');
+var gulp = require('gulp');
+var cleanCSS = require('gulp-clean-css');
+var htmlmin = require('gulp-html-minifier');
+var tinypng = require('gulp-tinypng-compress');
+/* const htmlmin = require('gulp-htmlmin'); */
 
 gulp.task('minify-css', () => {  
    return gulp.src('./src/css/*.css')
       .pipe(cleanCSS({ compatibility: 'ie8' }))
-      .pipe(gulp.dest('dist/css.'));
+      .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('move-js', () => {
@@ -23,11 +25,36 @@ gulp.task('move-js', () => {
       .pipe(gulp.dest('dist/js/'));
 });
 
-gulp.task('htmlmin', () => {
+/* gulp.task('htmlmin', () => {
+   return gulp.src('./src/index.html')
+      .pipe(htmlmin({
+         collapseWhitespace: true,
+         useshortdoctype: true
+      }))
+      .pipe(gulp.dest('dist/'));
+}); */
+
+
+gulp.task('minify', function () {
    return gulp.src('./src/*.html')
       .pipe(htmlmin({
-         collapseWhitespace: true
+         collapseWhitespace: true,
+         useshortdoctype: true
       }))
-      .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('dist/'))
 });
 
+gulp.task('fonts', function (cb) {
+   return gulp.src('./src/fonts/**/*')
+   .pipe(gulp.dest('dist/fonts'));
+   cb();
+});
+
+gulp.task('tinypng', function (cb) {
+   return gulp.src('./src/img/**/*.{png,jpg,jpeg}')
+      .pipe(tinypng({
+         key: 'ubHYlXS3Gu6K4WEg0ZIEK3LTTlJaQDCx'
+      }))
+      .pipe(gulp.dest('dist/img/'));
+      cb();
+});

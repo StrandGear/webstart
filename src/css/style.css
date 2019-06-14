@@ -348,6 +348,7 @@ template {
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: auto;
 }
 
 @font-face {
@@ -356,6 +357,7 @@ template {
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: auto;
 }
 
 @font-face {
@@ -400,6 +402,30 @@ img {
   .section {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .animated {
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-title {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 350px;
+    margin-left: 2px;
+  }
+  .section-title {
+    max-width: 350px;
   }
 }
 
@@ -560,174 +586,6 @@ img {
   display: none;
 }
 
-/* Slider */
-.slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat;
-}
-
-/* Icons */
-@font-face {
-  font-family: "slick";
-  src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Arrows */
-.slick-prev,
-.slick-next {
-  position: absolute;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 0px;
-  font-size: 0px;
-  cursor: pointer;
-  background: transparent;
-  color: transparent;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  padding: 0;
-  border: none;
-  outline: none;
-}
-
-.slick-prev:hover, .slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
-  outline: none;
-  background: transparent;
-  color: transparent;
-}
-
-.slick-prev:hover:before, .slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
-  opacity: 1;
-}
-
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-  opacity: 0.25;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-  color: white;
-  opacity: 0.75;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-  left: -25px;
-}
-
-[dir="rtl"] .slick-prev {
-  left: auto;
-  right: -25px;
-}
-
-.slick-prev:before {
-  content: "←";
-}
-
-[dir="rtl"] .slick-prev:before {
-  content: "→";
-}
-
-.slick-next {
-  right: -25px;
-}
-
-[dir="rtl"] .slick-next {
-  left: -25px;
-  right: auto;
-}
-
-.slick-next:before {
-  content: "→";
-}
-
-[dir="rtl"] .slick-next:before {
-  content: "←";
-}
-
-/* Dots */
-.slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-
-.slick-dots {
-  position: absolute;
-  bottom: -25px;
-  list-style: none;
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  margin: 0 5px;
-  padding: 0;
-  cursor: pointer;
-}
-
-.slick-dots li button {
-  border: 0;
-  background: transparent;
-  display: block;
-  height: 20px;
-  width: 20px;
-  outline: none;
-  line-height: 0px;
-  font-size: 0px;
-  color: transparent;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.slick-dots li button:hover, .slick-dots li button:focus {
-  outline: none;
-}
-
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
-  opacity: 1;
-}
-
-.slick-dots li button:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "•";
-  width: 20px;
-  height: 20px;
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-  text-align: center;
-  color: black;
-  opacity: 0.25;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-dots li.slick-active button:before {
-  color: black;
-  opacity: 0.75;
-}
-
 /* Импорт стилей шапки */
 .header {
   padding: 8px 0;
@@ -792,6 +650,20 @@ img {
   .header__button {
     font-size: 12px;
     padding: 15px 26px;
+  }
+  .header__logo {
+    width: 90px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__contacts {
+    display: none;
+  }
+  .header__button {
+    font-size: 10px;
+    padding: 10px 20px;
+    margin-right: 27px;
   }
   .header__logo {
     width: 90px;
@@ -921,6 +793,12 @@ img {
   }
 }
 
+@media (max-width: 360px) {
+  .hero-image {
+    width: 80%;
+  }
+}
+
 /* Стили для блока offer */
 .offer {
   background: url("../img/offer/offer-bg.png") no-repeat;
@@ -1046,6 +924,17 @@ img {
   }
 }
 
+@media (max-width: 360px) {
+  .offer {
+    background: white;
+  }
+  .offer-block {
+    max-width: 300px;
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
 /* Стили для модального окна */
 .modal {
   position: fixed;
@@ -1110,6 +999,12 @@ img {
 
 .slider__image {
   margin: auto;
+}
+
+@media (max-width: 360px) {
+  .portfolio__title {
+    text-align: start;
+  }
 }
 
 /* Стили для блока с ценами */
@@ -1219,6 +1114,14 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /* Стили для блока 5 шагов до ремонта */
@@ -1485,6 +1388,19 @@ img {
     margin-top: 90px;
     padding-top: 20px;
   }
+}
+
+@media (max-width: 400px) {
+  .brif-block {
+    max-width: 350px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form {
+    margin-left: 0;
+    padding-left: 0;
+  }
   .form__subtitle {
     margin-top: 20px;
   }
@@ -1499,11 +1415,19 @@ img {
 /* Стили для футера */
 .footer {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .map {
   position: absolute;
   width: 50%;
+  height: 640px;
   left: 0;
   top: 0;
 }
@@ -1568,5 +1492,34 @@ a {
   color: #333333;
   font-family: 'Museo Sans Bold' , sans-serif;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    max-width: 768px;
+  }
+  .map {
+    position: static;
+    max-width: 768px;
+    width: 90%;
+    height: 400px;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contacts {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    padding-top: 0;
+    padding-left: 0;
+  }
+  .contacts-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contacts__title {
+    margin-bottom: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

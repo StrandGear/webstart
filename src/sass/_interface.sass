@@ -18,6 +18,27 @@ img
    .section
       padding-top: 60px
       padding-bottom: 60px
+@media only screen and (max-width : 400px) 
+	.animated
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+@media (max-width: 400px)
+   .section
+      &-title
+         max-width: 350px
+
+@media (max-width: 360px)
+   .container
+      max-width: 350px
+      margin-left: 2px
+   .section
+      &-title
+         max-width: 350px
 .button
    border-radius: 10px
    background-color: $main-color

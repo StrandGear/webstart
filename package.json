@@ -22,7 +22,11 @@
     "gulp-clean-css": "^4.2.0"
   },
   "dependencies": {
+    "gulp-html-minifier": "^0.1.8",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-mcss": "^1.0.2"
+    "gulp-mcss": "^1.0.2",
+    "gulp-tinypng-compress": "^1.2.5",
+    "html-minifier": "^4.0.0",
+    "htmlminifyify": "^0.1.1"
   }
 }
