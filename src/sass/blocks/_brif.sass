@@ -1,5 +1,5 @@
 .brif
-   background-image: url('../img/brif/brif-bg-color.jpg'), url('../img/brif/brif-bg.jpg')
+   background-image: url('../img/brif/compressed/brif-bg-color.jpg'), url('../img/brif/compressed/brif-bg.jpg')
    background-position: left center, right center
    background-size: 50%, contain
    background-repeat: repeat-y, no-repeat
@@ -98,17 +98,23 @@
 
 @media (max-width: 768px)
    .brif
-      background-image: url('../img/brif/brif-bg-color.jpg'), url('../img/brif/brif-bg.jpg')
+      max-width: 768px
+      width: 100%
+      background-image: url('../img/brif/compressed/brif-bg-color.jpg'), url('../img/brif/compressed/brif-bg.jpg')
       background-position: top center, right bottom
       background-size: 100% 50%, cover /* 100% ширина 50% высота(нужна чтобы фоновая картинка не ездила) */
       background-repeat: repeat-x, no-repeat
       &-block
          flex-direction: column
+         display: inline-table
+         margin-left: -45px
       &__form
          margin-top: 90px
          padding-top: 20px
 @media (max-width: 400px)
    .brif
+      max-width: 400px
+      width: 100%
       &-block
          max-width: 350px
          align-items: center      
@@ -121,3 +127,9 @@
             text-align: center 
    .interview
       margin-left: 50px
+@media (max-width: 360px)
+   .brif
+      &-block
+         margin-left: 3px
+      &-form 
+         margin-left: 20px

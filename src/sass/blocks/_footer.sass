@@ -4,7 +4,6 @@
    flex-direction: column
 .map
    position: absolute
-   width: 50%
    height: 640px
    left: 0
    top: 0
@@ -42,14 +41,17 @@ a
    text-decoration: none
    color: $text-color
    +bold
+@media (max-width: 3000px)
+   .map
+      width: 50%
 @media (max-width: 768px)
    .footer
       max-width: 768px
    .map
-      position: static
+      position: relative
       max-width: 768px
       width: 90%
-      height: 400px
+      max-height: 350px
       top: 0
       margin-left: auto
       margin-right: auto
@@ -62,4 +64,13 @@ a
       &__title
          margin-bottom: 50px
          
-      
+@media (max-width: 360px)
+   .footer
+      max-width: 360px
+   .map
+      position: relative
+      max-width: 360px
+      width: 90%
+      max-height: 280px
+      margin-left: auto
+      margin-right: auto

@@ -421,11 +421,11 @@ img {
 
 @media (max-width: 360px) {
   .container {
-    max-width: 350px;
-    margin-left: 2px;
+    max-width: 360px;
+    width: 99%;
   }
   .section-title {
-    max-width: 350px;
+    max-width: 330px;
   }
 }
 
@@ -767,6 +767,9 @@ img {
 }
 
 @media (max-width: 768px) {
+  .hero-block {
+    display: block;
+  }
   .hero-text__title {
     font-size: 24px;
     line-height: 1.4;
@@ -801,7 +804,7 @@ img {
 
 /* Стили для блока offer */
 .offer {
-  background: url("../img/offer/offer-bg.png") no-repeat;
+  background: url("../img/offer/compressed/offer-bg.png") no-repeat;
   background-position: center right;
   background-size: contain;
   position: relative;
@@ -970,7 +973,7 @@ img {
 
 /* Стили для блока потрфолио */
 .portfolio {
-  background: #f5f5f5 url("../img/portfolio/portfolio_pattern.jpg") repeat-y center left;
+  background: #f5f5f5 url("../img/portfolio/compressed/portfolio_pattern.jpg") repeat-y center left;
   background-size: 50%;
 }
 
@@ -1202,10 +1205,7 @@ img {
     display: none;
   }
   .steps-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: block;
   }
 }
 
@@ -1225,9 +1225,15 @@ img {
   }
 }
 
+@media (max-width: 360px) {
+  .section-steps {
+    margin-top: -50px;
+  }
+}
+
 /* Стили для блока brif */
 .brif {
-  background-image: url("../img/brif/brif-bg-color.jpg"), url("../img/brif/brif-bg.jpg");
+  background-image: url("../img/brif/compressed/brif-bg-color.jpg"), url("../img/brif/compressed/brif-bg.jpg");
   background-position: left center, right center;
   background-size: 50%, contain;
   background-repeat: repeat-y, no-repeat;
@@ -1373,7 +1379,9 @@ img {
 
 @media (max-width: 768px) {
   .brif {
-    background-image: url("../img/brif/brif-bg-color.jpg"), url("../img/brif/brif-bg.jpg");
+    max-width: 768px;
+    width: 100%;
+    background-image: url("../img/brif/compressed/brif-bg-color.jpg"), url("../img/brif/compressed/brif-bg.jpg");
     background-position: top center, right bottom;
     background-size: 100% 50%, cover;
     background-repeat: repeat-x, no-repeat;
@@ -1383,6 +1391,8 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    display: inline-table;
+    margin-left: -45px;
   }
   .brif__form {
     margin-top: 90px;
@@ -1391,6 +1401,10 @@ img {
 }
 
 @media (max-width: 400px) {
+  .brif {
+    max-width: 400px;
+    width: 100%;
+  }
   .brif-block {
     max-width: 350px;
     -webkit-box-align: center;
@@ -1412,6 +1426,15 @@ img {
   }
 }
 
+@media (max-width: 360px) {
+  .brif-block {
+    margin-left: 3px;
+  }
+  .brif-form {
+    margin-left: 20px;
+  }
+}
+
 /* Стили для футера */
 .footer {
   position: relative;
@@ -1426,7 +1449,6 @@ img {
 
 .map {
   position: absolute;
-  width: 50%;
   height: 640px;
   left: 0;
   top: 0;
@@ -1494,15 +1516,21 @@ a {
   font-weight: 700;
 }
 
+@media (max-width: 3000px) {
+  .map {
+    width: 50%;
+  }
+}
+
 @media (max-width: 768px) {
   .footer {
     max-width: 768px;
   }
   .map {
-    position: static;
+    position: relative;
     max-width: 768px;
     width: 90%;
-    height: 400px;
+    max-height: 350px;
     top: 0;
     margin-left: auto;
     margin-right: auto;
@@ -1520,6 +1548,20 @@ a {
   }
   .contacts__title {
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    max-width: 360px;
+  }
+  .map {
+    position: relative;
+    max-width: 360px;
+    width: 90%;
+    max-height: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
